@@ -332,3 +332,21 @@
     transform: translateY(0);
   }
 }
+
+@utility animate-subtitle {
+  animation: subtitleAnimation 2.5s ease-in-out infinite;
+  display: inline-block;
+}
+
+@keyframes subtitleAnimation {
+  0%, 100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    text-shadow: 0 0 0px var(--color-primary-100);
+  }
+  50% {
+    opacity: 0.85;
+    transform: translateY(-3px) scale(1.02);
+    text-shadow: 0 0 10px var(--color-primary-200), 0 0 20px var(--color-primary-200);
+  }
+}
